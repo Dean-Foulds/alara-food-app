@@ -4,6 +4,9 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+
+
+
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -42,18 +45,29 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: Rails.application.secrets.domain_name,
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: Rails.application.secrets.email_provider_username,
-    password: Rails.application.secrets.email_provider_password
-  }
+
+# ActionMailer::Base.smtp_settings = {
+#   address: "smtp.gmail.com",
+#   port: 587,
+#   domain: 'gmail.com',
+#   user_name: ENV['GMAIL_ADDRESS'],
+#   password: ENV['GMAIL_APP_PASSWORD'],
+#   authentication: :login,
+#   enable_starttls_auto: true
+# }
+
+#  config.action_mailer.smtp_settings = {
+#   address: "smtp.gmail.com",
+#   port: 587,
+#   domain: "gmail.com",
+#   authentication: "plain",
+#   enable_starttls_auto: true,
+#   user_name: ENV["GMAIL_ADDRESS"],
+#   password: ENV["GMAIL_APP_PASSWORD"]
+# }
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.raise_delivery_errors = true
   # Send email in development mode?
   config.action_mailer.perform_deliveries = true
