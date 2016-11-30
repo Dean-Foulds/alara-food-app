@@ -85,6 +85,10 @@ section {
   color: #79AC29;
 }
 
+
+.padding {
+  padding-top: 50px;
+}
 //Banner
 .banner {
   color: white;
@@ -107,4 +111,94 @@ section {
   color: white;
   // color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
+}
+
+.padding-lower {
+  padding-bottom: 150px;
+}
+.footer {
+  padding-top: 50px;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  height: 80px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: lighter;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.card {
+  height: 83vh;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.card-description {
+  position: absolute;
+  margin-top: 30px;
+  bottom: 30px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 24px;
+  padding-top: 20px;
+  color: white;
+}
+.card-description p {
+  font-size: 16px;
+  // color: #EC8600;
+  color: white;
+  }
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover{
+  opacity: 0.1;
+}
+
+.avatar {
+  width: 30px;
+  border-radius: 50%;
+}
+.avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.avatar-bordered {
+  width: 30px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+.avatar-square {
+  width: 30px;
+  border-radius: 0px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+#map {
+  height: 350px;
+  width: 400px;
 }
